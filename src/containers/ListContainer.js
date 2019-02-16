@@ -6,7 +6,7 @@ import * as actions from '../store/actions';
 
 class ListContainer extends Component {
   componentDidMount() {
-    this.props.callPunkAPI();
+    this.props.callPunkAPI(this.props.page);
   }
   
   render() { 
@@ -21,13 +21,15 @@ class ListContainer extends Component {
 
 const mapStateToProps = ({product}) => {
   return {
-    productList: product.productList
+    productList: product.productList,
+    page: product.page,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    callPunkAPI: () => dispatch(actions.callPunkAPI)
+    callPunkAPI: (page) => dispatch(actions.callPunkAPI(page)),
+    moreList: (page) => dispatch(actions.morePage(page))
   }
 };
 export default connect(

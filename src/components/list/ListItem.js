@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ListItem = (productList) => {
-  return Object.keys(productList) &&  Object.keys(productList).map(objKey =>
-    <li key={productList[objKey].id}>
-      <Link to={"/product/" + productList[objKey].id}>
-        <p>{productList[objKey].name}</p>
-        <img src={productList[objKey].image_url} alt={productList[objKey].name + "product image"} />
+const ListItem = ({productList}) => {
+  return productList.length
+  ? productList.map(item =>
+    <li key={item.id}>
+      <Link to={"/product/" + item.id}>
+        <p>{item.name}</p>
+        <img src={item.image_url} alt={item.name + "product image"} />
       </Link>
-    </li>);
+    </li>)
+  : <p>Loading...</p>;
 }
 
 export default ListItem;

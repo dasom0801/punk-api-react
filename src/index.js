@@ -9,9 +9,9 @@ import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 
 // 새로고침 없이 수정 확인
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 // 리덕스 개발자 도구 적용
 const composeEnhancers =
