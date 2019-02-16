@@ -23,3 +23,17 @@ export const setPage = page => {
     page: page + 1
   }
 }
+
+export const searchKeyword = keyword => {
+  return {
+    type: types.SEARCH_KEYWORD,
+    inputKeyword: keyword
+  }
+}
+
+export const abvFilter = filter => {
+  return {
+    type: types.ABV_FILTER,
+    filter: filter
+  }
+}

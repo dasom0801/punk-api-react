@@ -1,7 +1,13 @@
 import * as actions from './actionTypes';
 
-export const product =  (state ={ productList: [], page: 1}, action) => {
-  
+const initialState = {
+  productList: [], 
+  page: 1,
+  filter: -1,
+  inputKeyword: ''
+}
+
+export const product = (state = initialState, action) => {
   switch (action.type) {
     case actions.CALL_PUNK_API:
       return {
@@ -12,6 +18,16 @@ export const product =  (state ={ productList: [], page: 1}, action) => {
       return {
         ...state,
         page: action.page
+      }
+    case actions.ABV_FILTER:
+      return {
+        ...state,
+        filter: action.filter
+      }
+    case actions.SEARCH_KEYWORD:
+      return {
+        ...state,
+        inputKeyword: action.inputKeyword
       }
     default:
       return state;

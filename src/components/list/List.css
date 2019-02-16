@@ -1,0 +1,13 @@
+.product-list ul {
+  margin-top: 30px;
+  justify-content: center;
+}
+.product-list li.box{
+  margin: 15px;
+  text-align: center;
+}
+
+.product-list li img {
+  display: inline-block;
+  max-height: 400px;
+}

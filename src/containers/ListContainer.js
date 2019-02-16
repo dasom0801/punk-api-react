@@ -23,13 +23,17 @@ const mapStateToProps = ({product}) => {
   return {
     productList: product.productList,
     page: product.page,
+    inputKeyword: product.inputKeyword,
+    filter: product.filter
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     callPunkAPI: (page) => dispatch(actions.callPunkAPI(page)),
-    moreList: (page) => dispatch(actions.morePage(page))
+    moreList: (page) => dispatch(actions.morePage(page)),
+    searchKeyword: (keyword) => dispatch(actions.searchKeyword(keyword)),
+    abvFilter: (filter) => dispatch(actions.abvFilter(filter))
   }
 };
 export default connect(
