@@ -4,7 +4,8 @@ const initialState = {
   productList: [], 
   page: 1,
   filter: -1,
-  inputKeyword: ''
+  searchInput: '',
+  searchKeyword: ''
 }
 
 export const product = (state = initialState, action) => {
@@ -24,10 +25,15 @@ export const product = (state = initialState, action) => {
         ...state,
         filter: action.filter
       }
-    case actions.SEARCH_KEYWORD:
+    case actions.SEARCH_INPUT:
       return {
         ...state,
-        inputKeyword: action.inputKeyword
+        searchInput: action.searchInput
+      }
+    case actions.SEARCH_KEYWORD: 
+      return {
+        ...state,
+        searchKeyword: action.searchKeyword
       }
     default:
       return state;

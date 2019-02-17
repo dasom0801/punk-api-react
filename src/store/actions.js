@@ -24,10 +24,20 @@ export const setPage = page => {
   }
 }
 
+// input value에 바인딩
+export const searchInput= keyword => {
+  console.log('keywor', keyword)
+  return {
+    type: types.SEARCH_INPUT,
+    searchInput: keyword
+  }
+}
+
+// 검색 submit할 때 사용할 키워드 값
 export const searchKeyword = keyword => {
   return {
     type: types.SEARCH_KEYWORD,
-    inputKeyword: keyword
+    searchKeyword: keyword
   }
 }
 
