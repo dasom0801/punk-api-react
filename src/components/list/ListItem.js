@@ -1,5 +1,4 @@
 import React from 'react';
-// import ListIcon from './ListIcon';
 import { Link } from 'react-router-dom';
 
 const ListItem = ({productList, filter, keyword}) => {
@@ -22,9 +21,9 @@ const ListItem = ({productList, filter, keyword}) => {
       max = 60;
       break;
   }
-  console.log(keyword)
   return productList.length
-  ? productList.filter(item => item.abv >= min && item.abv <= max && item.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1).map(item =>
+  ? productList.filter(item => (item.abv >= min) && (item.abv <= max) && (item.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1))
+  .map(item =>
     <li className="column box is-3" key={item.id}>
       <Link to={"/product/" + item.id}>
         <p>{item.name}</p>

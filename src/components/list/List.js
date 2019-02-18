@@ -4,8 +4,6 @@ import Button from './ListButton'
 import './List.css';
 
 const List = ({productList, moreList, page, filter, searchKeyword}) => {
-  console.log(searchKeyword, '11');
-  
   return (
     <div className="product-list">
       <ul className="columns is-multiline">

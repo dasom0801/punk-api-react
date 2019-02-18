@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 
 const initialState = {
-  productList: [], 
+  productList: [],
   page: 1,
   filter: -1,
   searchInput: '',
@@ -13,11 +13,7 @@ export const product = (state = initialState, action) => {
     case actions.CALL_PUNK_API:
       return {
         ...state,
-        productList: [...state.productList, ...action.productList]
-      }
-    case actions.MORE_LIST: 
-      return {
-        ...state,
+        productList: [...state.productList, ...action.productList],
         page: action.page
       }
     case actions.ABV_FILTER:
@@ -34,6 +30,18 @@ export const product = (state = initialState, action) => {
       return {
         ...state,
         searchKeyword: action.searchKeyword
+      }
+    case actions.RESET_LIST:
+      return {
+        ...state,
+        filter: -1,
+        searchInput: '',
+        searchKeyword: ''
+      }
+    case actions.HOME_LINK: 
+      return {
+        ...initialState,
+        productList: [...state.productList.splice(0, 9)],
       }
     default:
       return state;

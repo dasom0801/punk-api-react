@@ -33,7 +33,8 @@ const mapDispatchToProps = dispatch => {
     moreList: (page) => dispatch(actions.morePage(page)),
     handleSearchInput: (keyword) => dispatch(actions.searchInput(keyword)),
     handleSearchKeyword: (keyword) => dispatch(actions.searchKeyword(keyword)),
-    abvFilter: (filter) => dispatch(actions.abvFilter(filter))
+    abvFilter: (filter) => dispatch(actions.abvFilter(filter)),
+    handleResetList: () => dispatch(actions.resetList())
   }
 };
 export default connect(
