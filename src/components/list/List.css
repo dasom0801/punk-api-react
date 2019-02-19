@@ -6,8 +6,34 @@
   margin: 15px;
   text-align: center;
 }
-
+.product-list li a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.product-list li a p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 .product-list li img {
   display: inline-block;
-  max-height: 400px;
+  padding: 20px;
+  max-height: 350px;
+}
+
+.product-list li a:focus {
+  outline: none;
+}
+.product-list li a:hover p,
+.product-list li a:focus p {
+  color: #150578;
+}
+.product-list li a:hover img,
+.product-list li a:focus img {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+.product-list {
+  text-align: center;
 }

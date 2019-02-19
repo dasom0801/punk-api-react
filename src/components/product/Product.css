@@ -1,0 +1,80 @@
+.product {
+  min-height: 100vh;
+  padding: 30px;
+  background: #150578;
+  color: #fff;
+}
+
+.product::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.product .back {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.product .back:hover,
+.product .back:focus {
+  text-decoration: underline;
+}
+.product  .product-name {
+  margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: right;
+}
+.product .degree {
+  margin-bottom: 30px;
+  text-align: right;
+}
+.product  .degree * {
+  display: inline-block;
+}
+.product .degree p {
+  margin-left: 10px;
+  padding: 2px;
+  width: 100px;
+  background: #449DD1;
+  border-radius: 5px;
+  border: 1px solid #E0FAFF;
+  box-shadow: 1px 1px #E0FAFF;
+  color: #0E0E52;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.product .degree p span {
+  padding: 0px 2px;
+  width: 50px;
+  background: #E0FAFF;
+  border-radius: 3px;
+  border: 1px solid #0E0E52;
+  box-shadow: 1px 1px #0E0E52;
+  text-align: center;
+}
+
+.product img {
+  float:left;
+  margin: 0 50px;
+  padding: 10px;
+  height: 80vh;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #449DD1;
+  box-shadow: 5px 5px #449DD1;
+}
+
+.product .tagline {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.product .description {
+  margin-bottom: 15px;
+}

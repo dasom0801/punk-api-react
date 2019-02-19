@@ -1,0 +1,60 @@
+main {
+  padding: 30px;
+  background: #150578;
+}
+
+main .search-container {
+  text-align: center;
+}
+
+main .search-container form{
+  margin-bottom: 15px;
+}
+main .search-container form * {
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 45px;
+}
+main .search-container form input {
+  margin-right: 10px;
+  padding: 5px;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 3px;
+}
+
+main button {
+    margin-right: 15px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 3px;
+    color: #150578;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+main button:hover,
+main button:focus {
+  box-shadow: 2px 2px #449DD1;
+  outline: none;
+}
+
+main .search-container button:last-child {
+  margin-right: 0;
+}
+main .search-container form button {
+  width: 100px;
+  border: 2px solid #ccc;
+  font-weight: bold;
+}
+main .search-container .filter{
+  margin-bottom: 10px;
+}
+
+main .search-container .filter button.selected {
+  background: #449DD1;
+  box-shadow: 1px 1px #E0FAFF;
+  color: #E0FAFF;
+  font-weight: bold;
+}

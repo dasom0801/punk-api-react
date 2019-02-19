@@ -1,13 +1,17 @@
 import React from 'react';
-import Search from './Search';
-import Filter from './Filter';
+import Search from './MainSearch';
+import Filter from './MainFilter';
 import List from '../list/List'
+import './Main.css';
 
 const Main = (props) => {
   return (
     <main>
-      <Search {...props} />
-      <Filter {...props} />
+      <div className="search-container">
+        <Search {...props} />
+        <Filter {...props} />
+        <button className="reset-button" onClick={() => props.handleResetList()}> reset all </button>
+      </div>
       <List {...props} />
     </main>
   )
